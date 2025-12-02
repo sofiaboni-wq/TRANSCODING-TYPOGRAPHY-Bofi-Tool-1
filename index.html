@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>BOFI QUATROS</title>
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PANNELLO CONTROLLI -->
+<div id="controls">
+
+    <div class="control">
+        <label>About / Contacts</label>
+        <p>
+            Questo tool permette di giocare con lettere e immagini.
+            <br>Contatti: email@example.com
+        </p>
+    </div>
+
+    <div class="control">
+        <label>Your text here</label>
+        <input type="text" id="textInput" placeholder="Scrivi qui il testo...">
+    </div>
+
+    <div class="control">
+        <label>SIZE</label>
+        <input type="range" id="sizeSlider" min="20" max="200" value="80">
+    </div>
+
+    <div class="control">
+        <label>CRAZYNESS</label>
+        <input type="range" id="crazySlider" min="0" max="3" value="0">
+    </div>
+
+    <div class="control">
+        <label><input type="checkbox" id="mouseMode"> Mouse reactive mode</label>
+    </div>
+
+    <div class="control">
+        <label><input type="checkbox" id="galleryMode"> Show trail gallery</label>
+    </div>
+
+    <button id="downloadBtn">Download</button>
+</div>
+
+<!-- AREA CANVAS -->
+<div id="canvas">
+    <div id="textWrapper"></div>
+</div>
+
+<!-- GALLERY -->
+<div id="gallery"></div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+    <div id="lightboxContent">
+        <img id="lightboxImg" src="MIAO"/>
+        <div id="lightboxCaption"></div>
+        <button id="lightboxClose">X</button>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+}
+
+/* PANNELLO CONTROLLI */
+#controls {
+    width: 33%;
+    background: #ffffff;
+    border-right: 2px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    overflow-y: auto;
+}
+
+.control { margin-bottom: 30px; }
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 18px;
+}
+input[type="range"], input[type="text"] { width: 100%; }
+
+#downloadBtn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 18px;
+    background: #4a80f0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* CANVAS */
+#canvas {
+    width: 67%;
+    position: relative;
+    overflow: hidden;
+    background: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#textWrapper {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    z-index: 1; /* testo dietro la scia */
+}
+
+/* Scia */
+.trail {
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 2s ease-out;
+}
+
+/* Gallery */
+#gallery {
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #fafafa;
+}
+
+#gallery img {
+    width: 140px; /* leggermente più piccole */
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: transform 0.2s;
+}
+
+#gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* LIGHTBOX */
+#lightbox {
+    display: none;
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightboxContent {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 90%;
+    max-height: 90%;
+    justify-content: center;
+}
+
+#lightboxImg {
+    max-width: 60%; /* più piccolo e centrato */
+    max-height: 80%;
+    border-radius: 8px;
+}
+
+#lightboxCaption {
+    margin-left: 20px;
+    color: white;
+    max-width: 25%;
+    font-size: 16px;
+}
+
+#lightboxClose {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
